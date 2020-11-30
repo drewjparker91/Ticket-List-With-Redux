@@ -20,12 +20,12 @@ describe('ticketListReducer', () => {
     issue: 'Redux action is not working correctly.',
     id: 1
   };
-  const newTicketData = {
-    names: 'Will & Drew',
-    location: '4b',
-    issue: 'Redux action is not working correctly.',
-    id: 1
-  }
+  // const newTicketData = {
+  //   names: 'Will & Drew',
+  //   location: '4b',
+  //   issue: 'Redux action is not working correctly.',
+  //   id: 1
+  // }
 
   test('Should return default state if there is no action type passed into the reducer', () => {
     expect(ticketListReducer({}, { type: null })).toEqual({});
@@ -51,25 +51,25 @@ describe('ticketListReducer', () => {
     });
   });
 
-  test ('Should successfully update a ticket', () => {
-    const { names, location, issue, id } = newTicketData;
-    action = {
-      type: 'UPDATE_TICKET',
-      names: names,
-      location: location,
-      issue: issue,
-      id: id
-    };
+  // test ('Should successfully update a ticket', () => {
+  //   const { names, location, issue, id } = newTicketData;
+  //   action = {
+  //     type: 'UPDATE_TICKET',
+  //     names: names,
+  //     location: location,
+  //     issue: issue,
+  //     id: id
+  //   };
 
-    expect(ticketListReducer({}, action)).toEqual({
-      [id] : {
-        names: names,
-        location: location,
-        issue: issue,
-        id: id
-      }
-    });
-  });
+  //   expect(ticketListReducer({}, action)).toEqual({
+  //     [id] : {
+  //       names: names,
+  //       location: location,
+  //       issue: issue,
+  //       id: id
+  //     }
+  //   });
+  // });
 
   test('Should successfully delete a ticket', () => {
     action = {

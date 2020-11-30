@@ -10,15 +10,15 @@ export default (state = {}, action) => {
         id: id
       }
     });
-  case 'UPDATE_TICKET':
-    return Object.assign({}, state, {
-      [id]: {
-        names: names,
-        location: location,
-        issue: issue,
-        id: id
-      }
-    });
+  // case 'UPDATE_TICKET':
+  //   return Object.assign({}, state, {
+  //     [id]: {
+  //       names: names,
+  //       location: location,
+  //       issue: issue,
+  //       id: id
+  //     }
+  //   });
   case 'DELETE_TICKET':
     const newState = { ...state };
     delete newState[id];
